@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a0a0a0;
+    color: #111;
+}
+
+header {
+    background-color: #010638;
+    color: rgb(191, 194, 11);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAV DE CATEGORIAS */
+.nicho-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    padding: 0 1rem;
+}
+
+.nicho-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #010638;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    font-size: 1rem;
+    height: 100px;
+}
+
+.nicho-nav a:hover {
+    background-color: #191970;
+    transform: translateY(-5px);
+}
+
+/* CONTAINER DE PRODUTOS */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* CARD DE PRODUTO */
+.product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+
+.product h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    min-height: 40px;
+    /* garante altura pra todos os nomes */
+}
+
+.product p {
+    color: #555;
+    font-size: 0.9rem;
+    min-height: 45px;
+    line-height: 1.3;
+}
+
+/* BOTÃO PADRÃO */
+.product a {
+    margin-top: auto;
+    padding: 0.6rem 1rem;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product a:hover {
+    background-color: #1DA851;
+}
+
+/* RESPONSIVO MOBILE */
+@media (max-width: 768px) {
+    .product {
+        width: 100%;
+        max-width: 90vw;
+    }
+
+    .nicho-nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
